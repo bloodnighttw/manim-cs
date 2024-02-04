@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "manim-cs"
+version = "0.1.0"
+description = "A manim package which have serveral stuff related to computer science, such like bits, byte, data structure, algorithm, etc."
+authors = ["bloodnighttw <emails@bntw.dev>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "manim_cs", from="src"}]
+
+[tool.poetry.dependencies]
+python = "3.11.7"
+manim = "^0.18.0"
+
+[tool.poetry.plugins."manim.plugins"]
+"manim_cs" = "manim_cs"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
